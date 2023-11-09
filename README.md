@@ -1,6 +1,6 @@
 # Samuel M. Swain
 
-Welcome to my GitHub! I'm Samuel, a data scientist in training with a passion for machine learning, cloud computing, and IoT solutions. Currently, I'm completing my Master of Science in Machine Learning and Data Science at Northwestern University.
+Welcome to my GitHub! I'm Sam, a data scientist in training with a passion for machine learning, cloud computing, and IoT solutions. Currently, I'm completing my Master of Science in Machine Learning and Data Science at Northwestern University.
 
 ## Projects
 
