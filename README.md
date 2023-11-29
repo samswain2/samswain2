@@ -32,16 +32,6 @@ A complete machine learning pipeline designed to classify cloud types from image
 - **Data Scientist / Machine Learning Engineer Intern**, Center for Deep Learning
   - Built AWS IoT real-time streaming pipelines and automated model retraining processes.
 
-## Upcoming Projects
-- Reinforcement Learning for Chess: Utilizing reinforcement learning techniques to create a chess-playing AI, inspired by the principles used in AlphaGo.
-- AI Image Generator for Social Media: Developing a fine-tuned Stable Diffusion model to generate consistent images of a persona in various outfits and settings for Instagram.
-- Data Collection Automation: Creating a tool to automate data collection processes, enhancing the efficiency and scope of data available for machine and deep learning projects.
-- Classical Machine Learning: Engaging in a project that reinforces the basics of machine learning, possibly involving predictive analytics or natural language processing.
-- Enhancing DQN for Ms. Pac-Man: Improving the Deep Q-Network (DQN) model to enhance its performance in playing Ms. Pac-Man.
-- Deep Learning in Minecraft: Experimenting with deep learning models to navigate and interact within the Minecraft environment.
-- LLM and Image Generation Integration: Combining a language model with an image generation model to explore context-aware image creation.
-- Vision-Understanding Model: Integrating an image recognition model with a language model to develop a comprehensive vision-understanding system.
-
 ## Connect
 
 - **Email**: [samswain2256@gmail.com](mailto:samswain2256@gmail.com)
