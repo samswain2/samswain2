@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sam Swain | Resume</title>
+    <meta
+      name="description"
+      content="Resume website for Sam Swain, AI Engineer and Machine Learning Engineer."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fffdf8;
+        --surface: #fff;
+        --surface-soft: #fff8eb;
+        --text: #1f2937;
+        --text-subtle: #4b5563;
+        --line: #f2ddbc;
+        --brand: #0f766e;
+        --brand-soft: #ccfbf1;
+        --accent: #b45309;
+        --shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        --radius-xl: 18px;
+        --radius-md: 12px;
+        --container: min(1040px, 92vw);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        font-family: "Source Sans 3", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(1000px 550px at 6% -12%, #fde68a 0%, transparent 55%),
+          radial-gradient(900px 500px at 100% 0%, #99f6e4 0%, transparent 46%),
+          var(--bg);
+        line-height: 1.45;
+      }
+
+      .page {
+        width: var(--container);
+        margin: 2.25rem auto 3rem;
+      }
+
+      .card {
+        background: #fffdfa;
+        border: 1px solid #f6e7cd;
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow);
+        padding: clamp(1rem, 1.8vw, 2.25rem);
+        backdrop-filter: blur(6px);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        border-radius: 999px;
+        background: radial-gradient(circle at 35% 35%, #fef3c7, #f59e0b 70%);
+        opacity: 0.2;
+        top: -85px;
+        right: -95px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Outfit", sans-serif;
+        line-height: 1.15;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.35rem);
+        letter-spacing: -0.02em;
+      }
+
+      .subtitle {
+        margin-top: 0.45rem;
+        color: var(--text-subtle);
+        font-size: clamp(1.05rem, 2vw, 1.2rem);
+      }
+
+      .contact-row {
+        margin-top: 1.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+
+      .pill {
+        padding: 0.45rem 0.72rem;
+        border-radius: 999px;
+        background: var(--surface-soft);
+        border: 1px solid var(--line);
+        color: #334155;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 170ms ease, background-color 170ms ease;
+      }
+
+      .pill:hover {
+        transform: translateY(-2px);
+        background: #ffefcd;
+      }
+
+      main {
+        margin-top: 1rem;
+        display: grid;
+        gap: 1rem;
+      }
+
+      section {
+        animation: rise-in 600ms ease both;
+      }
+
+      section:nth-child(2) {
+        animation-delay: 80ms;
+      }
+      section:nth-child(3) {
+        animation-delay: 160ms;
+      }
+      section:nth-child(4) {
+        animation-delay: 240ms;
+      }
+      section:nth-child(5) {
+        animation-delay: 320ms;
+      }
+
+      @keyframes rise-in {
+        from {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .section-title {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: clamp(1.25rem, 3vw, 1.6rem);
+      }
+
+      .section-title::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 4px;
+        background: linear-gradient(135deg, var(--brand), #2dd4bf);
+      }
+
+      .entries {
+        margin-top: 0.95rem;
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .entry {
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 0.9rem 0.95rem;
+        background: #fffefb;
+      }
+
+      .entry-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.65rem;
+        flex-wrap: wrap;
+        align-items: baseline;
+      }
+
+      .entry-role {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+
+      .entry-meta {
+        color: var(--text-subtle);
+        font-weight: 600;
+      }
+
+      ul {
+        margin: 0.55rem 0 0;
+        padding-left: 1.12rem;
+      }
+
+      li + li {
+        margin-top: 0.35rem;
+      }
+
+      .skills-grid {
+        margin-top: 0.95rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .skill-row {
+        display: grid;
+        gap: 0.5rem;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: #fffefb;
+        padding: 0.9rem 0.95rem;
+      }
+
+      .label {
+        font-weight: 700;
+        font-family: "Outfit", sans-serif;
+        color: var(--accent);
+      }
+
+      footer {
+        margin-top: 1.1rem;
+        text-align: center;
+        color: var(--text-subtle);
+      }
+
+      @media (max-width: 780px) {
+        .page {
+          margin-top: 1rem;
+        }
+
+        .card {
+          border-radius: 16px;
+        }
+
+        .entry-head {
+          flex-direction: column;
+          gap: 0.25rem;
+        }
+      }
+
+      @media print {
+        body {
+          background: #fff;
+          font-size: 11pt;
+        }
+
+        .page {
+          width: 100%;
+          margin: 0;
+        }
+
+        .card,
+        .entry,
+        .skill-row {
+          box-shadow: none;
+          border-color: #ddd;
+          break-inside: avoid;
+        }
+
+        .hero::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="card hero">
+        <h1>Sam Swain</h1>
+        <p class="subtitle">AI Engineer | Machine Learning Engineer</p>
+        <div class="contact-row">
+          <a class="pill" href="mailto:samswain2256@gmail.com">samswain2256@gmail.com</a>
+          <a class="pill" href="https://linkedin.com/in/smswain2" target="_blank" rel="noopener noreferrer"
+            >linkedin.com/in/smswain2</a
+          >
+          <a class="pill" href="https://github.com/samswain2" target="_blank" rel="noopener noreferrer"
+            >github.com/samswain2</a
+          >
+          <a class="pill" href="tel:+13092655565">(309) 265-5565</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="card">
+          <h2 class="section-title">Work Experience</h2>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">AI Engineer, Vultron</h3>
+                <p class="entry-meta">San Francisco, CA | Oct 2025 - Present</p>
+              </div>
+              <ul>
+                <li>
+                  Led a critical extension of Vultron’s core LLM API layer to support Claude on AWS Bedrock and GCP,
+                  rewriting 50K+ lines of Python to enable FedRAMP High-compliant deployments for security-sensitive
+                  customers.
+                </li>
+                <li>
+                  Expanded addressable market by approximately 2x by unlocking FedRAMP High eligibility and enabling
+                  adoption by mid-market contractors with strict compliance requirements.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Machine Learning Engineer, The Aspen Group</h3>
+                <p class="entry-meta">Chicago, IL | Jan 2024 - Aug 2025</p>
+              </div>
+              <ul>
+                <li>
+                  Generated $213M/year by developing Show-Score, an ML and optimization system using XGBoost and PuLP
+                  to improve appointment scheduling efficiency.
+                </li>
+                <li>
+                  Built and deployed 28 Show-Score retraining pipelines in parallel using GitLab CI, Docker,
+                  Terraform, and GCP, plus daily inference pipelines and Tableau monitoring dashboards.
+                </li>
+                <li>Delivered $24M+/year in revenue by automating office report delivery via Python, SMTP, and GCP.</li>
+                <li>
+                  Developed an XGBoost model generating $36M/year, adopted by 7.6k employees for daily
+                  decision-making.
+                </li>
+                <li>
+                  Saved $13M annually by constructing a pipeline that partially automates insurance verification form
+                  population.
+                </li>
+                <li>
+                  Created an automated forecasting system that predicts Aspen’s total revenue with 97.8% accuracy at a
+                  6-month horizon.
+                </li>
+                <li>
+                  Prototyped a Python pipeline to ingest, validate, and process data from IoT weather stations across
+                  1.1k office locations, reducing runtime from 8 hours to 2 hours.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Applied Scientist Intern, Amazon (Capstone)</h3>
+                <p class="entry-meta">Evanston, IL | Sept 2023 - Dec 2023</p>
+              </div>
+              <ul>
+                <li>
+                  Led design and implementation of a dynamic Q&A system, integrating RAG to improve answer recall by
+                  11% using 800+ sources.
+                </li>
+                <li>
+                  Achieved a 100% improvement in content coherence by fine-tuning LLaMA 2 7B on curated data produced
+                  from AWS VPC documentation.
+                </li>
+                <li>
+                  Built a user-friendly UI and backend for the Amazon VPC Q&A system to support dynamic answer
+                  retrieval and serving.
+                </li>
+              </ul>
+            </article>
+
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Data Science Intern, United Airlines</h3>
+                <p class="entry-meta">Chicago, IL | June 2023 - Sept 2023</p>
+              </div>
+              <ul>
+                <li>
+                  Developed an autoencoder model that achieved 70% precision for Boeing 787 electrical heartbeat
+                  anomaly detection, with anticipated savings of $20k.
+                </li>
+                <li>
+                  Built a dynamic dashboard to visualize abnormality scores, feature signals, and reconstructions,
+                  reducing iteration time by 75%.
+                </li>
+                <li>
+                  Engineered a random forest model and identified temperature as a key feature for 787 generator
+                  anomaly detection.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Northwestern University</h3>
+                <p class="entry-meta">Dec 2023</p>
+              </div>
+              <p class="entry-meta">M.S. in Machine Learning and Data Science</p>
+            </article>
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">University of Illinois at Urbana-Champaign</h3>
+                <p class="entry-meta">Mar 2021</p>
+              </div>
+              <p class="entry-meta">B.S. in Statistics, Economics</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Projects</h2>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Software Engineer, Data Bob LLC</h3>
+                <p class="entry-meta">Peoria, IL | March 2024 - Present</p>
+              </div>
+              <ul>
+                <li>
+                  Improved office KPI tracking efficiency by 95% by developing and maintaining a full-stack KPI web
+                  app using Cloudflare, Django REST Framework, Next.js, PostgreSQL, Terraform, and GitHub CI/CD.
+                </li>
+                <li>
+                  Built a custom Linux server to host the internal KPI platform with 24/7 uptime, SSH-based remote
+                  development, and secure office access via IP whitelisting.
+                </li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2 class="section-title">Skills</h2>
+          <div class="skills-grid">
+            <article class="skill-row">
+              <p class="label">Tools</p>
+              <p>
+                GCP, AWS, Cloudflare, Docker, Kubernetes, GitLab CI, Linux, Windows, Git, TensorFlow, PyTorch,
+                Scikit-Learn, XGBoost, PuLP, Gurobi, LangChain, Apache Spark, Hadoop, Hive, MapReduce
+              </p>
+            </article>
+            <article class="skill-row">
+              <p class="label">Languages / Frameworks</p>
+              <p>Python, Terraform, SQL, JavaScript, Java, Rust</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Sam Swain • AI/ML Engineering • Open to impactful technical work</p>
+      </footer>
+    </div>
+  </body>
+</html>
