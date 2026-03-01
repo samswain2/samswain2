@@ -11,23 +11,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <style>
       :root {
-        --nu-purple: #4e2a84;
-        --nu-purple-deep: #2f1c52;
-        --nu-purple-soft: #ece5f8;
-        --nu-lilac: #f6f2ff;
-        --paper: #ffffff;
-        --ink: #1f1731;
-        --ink-soft: #5c5472;
-        --line: #e2d8f4;
-        --shadow: 0 16px 42px rgba(33, 19, 62, 0.1);
-        --radius-xl: 22px;
-        --radius-md: 14px;
-        --container: min(1120px, 92vw);
+        --accent: #4e2a84;
+        --accent-soft: #f4f0fa;
+        --text: #111827;
+        --muted: #6b7280;
+        --line: #e5e7eb;
+        --bg: #fafafb;
+        --card: #ffffff;
+        --radius: 12px;
+        --container: min(900px, 92vw);
       }
 
       * {
@@ -42,238 +39,104 @@
 
       body {
         min-height: 100vh;
-        font-family: "Work Sans", sans-serif;
-        color: var(--ink);
-        background:
-          radial-gradient(1000px 520px at 96% -8%, rgba(78, 42, 132, 0.3) 0%, transparent 62%),
-          radial-gradient(700px 420px at -8% 16%, rgba(144, 119, 198, 0.25) 0%, transparent 60%),
-          linear-gradient(180deg, #f2ecff 0%, #f9f7ff 40%, #fdfdff 100%);
-        line-height: 1.5;
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        pointer-events: none;
-        background-image: linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
-        background-size: 42px 42px;
-        opacity: 0.35;
+        font-family: "Manrope", sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.55;
       }
 
       .page {
-        position: relative;
-        z-index: 1;
         width: var(--container);
-        margin: 1.8rem auto 3rem;
+        margin: 2.5rem auto 3rem;
       }
 
       .hero {
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow);
-        position: relative;
-        overflow: hidden;
-        padding: clamp(1.1rem, 2vw, 2.2rem);
-        background: linear-gradient(
-          135deg,
-          rgba(47, 28, 82, 0.98) 0%,
-          rgba(78, 42, 132, 0.96) 56%,
-          rgba(103, 70, 161, 0.94) 100%
-        );
-        border: 1px solid rgba(255, 255, 255, 0.23);
-      }
-
-      .hero::before {
-        content: "";
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        border-radius: 999px;
-        background: radial-gradient(circle at 30% 32%, rgba(255, 255, 255, 0.5), rgba(192, 168, 236, 0.18) 72%);
-        right: -130px;
-        top: -110px;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: auto -30px -24px auto;
-        width: 180px;
-        height: 180px;
-        border-radius: 30px;
-        transform: rotate(14deg);
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.02));
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 1.5rem 1.4rem;
       }
 
       h1,
       h2,
       h3 {
         margin: 0;
-        font-family: "Sora", sans-serif;
-        line-height: 1.15;
+        font-family: "Manrope", sans-serif;
+        line-height: 1.2;
       }
 
       h1 {
-        color: #ffffff;
-        font-size: clamp(2.1rem, 5vw, 3.45rem);
-        letter-spacing: -0.03em;
-      }
-
-      .hero-kicker {
-        margin: 0 0 0.7rem;
-        display: inline-block;
-        font-size: 0.82rem;
-        color: rgba(255, 255, 255, 0.92);
-        letter-spacing: 0.11em;
-        font-weight: 600;
-        text-transform: uppercase;
-        border: 1px solid rgba(255, 255, 255, 0.42);
-        padding: 0.2rem 0.55rem;
-        border-radius: 999px;
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        letter-spacing: -0.02em;
       }
 
       .subtitle {
-        margin-top: 0.52rem;
-        color: rgba(255, 255, 255, 0.88);
-        font-size: clamp(1.03rem, 2vw, 1.2rem);
+        margin-top: 0.45rem;
+        color: var(--muted);
+        font-size: 1.08rem;
         font-weight: 500;
       }
 
       .contact-row {
-        margin-top: 1.2rem;
+        margin-top: 1rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.62rem;
+        gap: 0.55rem;
       }
 
       .pill {
-        position: relative;
-        z-index: 1;
-        padding: 0.5rem 0.78rem;
+        padding: 0.35rem 0.65rem;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.32);
-        color: #ffffff;
+        background: var(--accent-soft);
+        border: 1px solid #ded4ef;
+        color: #3d2565;
         text-decoration: none;
         font-weight: 600;
-        font-size: 0.94rem;
-        transition: transform 170ms ease, background-color 170ms ease, border-color 170ms ease;
+        font-size: 0.9rem;
+        transition: background-color 140ms ease, border-color 140ms ease;
       }
 
       .pill:hover {
-        transform: translateY(-1px);
-        background: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.54);
-      }
-
-      .impact-row {
-        margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .impact-pill {
-        position: relative;
-        z-index: 1;
-        padding: 0.34rem 0.62rem;
-        border-radius: 8px;
-        background: rgba(20, 11, 38, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.24);
-        color: rgba(255, 255, 255, 0.92);
-        font-size: 0.83rem;
-        font-weight: 600;
+        background: #ede5f8;
+        border-color: #ccb9ea;
       }
 
       main {
-        margin-top: 1.1rem;
+        margin-top: 0.85rem;
         display: grid;
-        gap: 1rem;
+        gap: 0.75rem;
       }
 
       section {
-        border-radius: var(--radius-xl);
-        box-shadow: var(--shadow);
+        background: var(--card);
         border: 1px solid var(--line);
-        background: linear-gradient(180deg, var(--paper) 0%, var(--nu-lilac) 100%);
-        padding: clamp(1rem, 1.8vw, 2rem);
-        position: relative;
-        overflow: hidden;
-        animation: rise-in 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
-      }
-
-      section:nth-child(2) {
-        animation-delay: 80ms;
-      }
-      section:nth-child(3) {
-        animation-delay: 160ms;
-      }
-      section:nth-child(4) {
-        animation-delay: 240ms;
-      }
-      section:nth-child(5) {
-        animation-delay: 320ms;
-      }
-
-      section::before {
-        content: "";
-        position: absolute;
-        top: 0.95rem;
-        bottom: 0.95rem;
-        left: 0;
-        width: 4px;
-        border-radius: 0 4px 4px 0;
-        background: linear-gradient(180deg, var(--nu-purple) 0%, #9079be 100%);
-      }
-
-      @keyframes rise-in {
-        from {
-          opacity: 0;
-          transform: translateY(14px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        border-radius: var(--radius);
+        padding: 1.1rem 1rem;
       }
 
       .section-title {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: clamp(1.25rem, 3vw, 1.6rem);
-        color: var(--nu-purple-deep);
+        font-size: 1.3rem;
+        color: var(--accent);
+        padding-bottom: 0.55rem;
+        border-bottom: 1px solid var(--line);
       }
 
       .section-title::before {
-        content: "";
-        width: 10px;
-        height: 10px;
-        border-radius: 999px;
-        background: var(--nu-purple);
-        box-shadow: 0 0 0 6px rgba(78, 42, 132, 0.12);
+        content: none;
       }
 
       .entries {
-        margin-top: 1rem;
+        margin-top: 0.6rem;
         display: grid;
-        gap: 0.8rem;
+        gap: 0.25rem;
       }
 
       .entry {
-        border: 1px solid #e8e0f7;
-        border-radius: var(--radius-md);
-        padding: 1rem;
-        background: #fff;
-        transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-      }
-
-      .entry:hover {
-        transform: translateY(-2px);
-        border-color: #d7c8f3;
-        box-shadow: 0 10px 24px rgba(47, 28, 82, 0.09);
+        border: 0;
+        border-bottom: 1px solid #f0f1f3;
+        border-radius: 0;
+        padding: 0.7rem 0.1rem;
+        background: transparent;
       }
 
       .entry-head {
@@ -286,109 +149,77 @@
 
       .entry-role {
         font-weight: 700;
-        font-size: 1.05rem;
-        color: var(--nu-purple-deep);
+        font-size: 1.03rem;
+        color: var(--text);
       }
 
       .entry-meta {
-        color: var(--ink-soft);
+        color: var(--muted);
         font-weight: 600;
+        font-size: 0.95rem;
       }
 
       ul {
-        margin: 0.6rem 0 0;
-        padding-left: 1.2rem;
+        margin: 0.55rem 0 0;
+        padding-left: 1rem;
       }
 
       li::marker {
-        color: var(--nu-purple);
+        color: var(--accent);
       }
 
       li + li {
-        margin-top: 0.4rem;
+        margin-top: 0.3rem;
       }
 
       .skills-grid {
-        margin-top: 1rem;
+        margin-top: 0.65rem;
         display: grid;
-        gap: 0.82rem;
-      }
-
-      @media (min-width: 900px) {
-        .skills-grid {
-          grid-template-columns: 1fr 1fr;
-        }
+        gap: 0.4rem;
       }
 
       .skill-row {
         display: grid;
-        gap: 0.5rem;
-        border: 1px solid #ddd1f4;
-        border-radius: var(--radius-md);
-        background: linear-gradient(180deg, #fefeff, #f7f3ff);
-        padding: 0.95rem 1rem;
+        gap: 0.35rem;
+        border: 1px solid #efeff1;
+        border-radius: 10px;
+        background: #fcfcfd;
+        padding: 0.75rem 0.85rem;
       }
 
       .label {
         font-weight: 700;
-        font-family: "Sora", sans-serif;
-        color: var(--nu-purple);
-        letter-spacing: 0.02em;
+        color: var(--accent);
+        letter-spacing: 0.01em;
       }
 
       footer {
-        margin-top: 1.2rem;
+        margin-top: 0.9rem;
         text-align: center;
-        color: var(--ink-soft);
+        color: var(--muted);
         font-weight: 600;
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        section {
-          animation: none;
-        }
-
-        .entry,
-        .pill {
-          transition: none;
-        }
+        font-size: 0.9rem;
       }
 
       @media (max-width: 780px) {
         .page {
-          margin-top: 0.9rem;
+          margin-top: 1rem;
         }
 
         .hero {
-          border-radius: 18px;
-        }
-
-        section {
-          border-radius: 16px;
-        }
-
-        .hero-kicker {
-          font-size: 0.75rem;
-        }
-
-        .impact-row {
-          gap: 0.42rem;
+          padding: 1.1rem 1rem;
         }
 
         .entry-head {
           flex-direction: column;
-          gap: 0.32rem;
+          gap: 0.2rem;
         }
       }
 
       @media print {
         body {
           background: #fff;
-          font-size: 10.7pt;
-        }
-
-        body::before {
-          display: none;
+          font-size: 10.5pt;
         }
 
         .page {
@@ -400,23 +231,8 @@
         section,
         .entry,
         .skill-row {
-          box-shadow: none;
           border-color: #ddd;
           break-inside: avoid;
-        }
-
-        .hero::before,
-        .hero::after,
-        section::before {
-          display: none;
-        }
-
-        .hero,
-        .pill,
-        .impact-pill {
-          color: #111;
-          background: #fff;
-          border-color: #ddd;
         }
       }
     </style>
@@ -424,7 +240,6 @@
   <body>
     <div class="page">
       <header class="card hero">
-        <p class="hero-kicker">Northwestern-Inspired Theme</p>
         <h1>Sam Swain</h1>
         <p class="subtitle">AI Engineer | Machine Learning Engineer</p>
         <div class="contact-row">
@@ -436,12 +251,6 @@
             >github.com/samswain2</a
           >
           <a class="pill" href="tel:+13092655565">(309) 265 5565</a>
-        </div>
-        <div class="impact-row">
-          <span class="impact-pill">$213M/yr Generated</span>
-          <span class="impact-pill">FedRAMP High Enablement</span>
-          <span class="impact-pill">97.8% Forecast Accuracy</span>
-          <span class="impact-pill">28 Parallel ML Pipelines</span>
         </div>
       </header>
 
