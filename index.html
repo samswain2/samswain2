@@ -294,11 +294,29 @@
           <a class="pill" href="https://github.com/samswain2" target="_blank" rel="noopener noreferrer"
             >github.com/samswain2</a
           >
-          <a class="pill" href="tel:+13092655565">(309) 265-5565</a>
+          <a class="pill" href="tel:+13092655565">(309) 265 5565</a>
         </div>
       </header>
 
       <main>
+        <section class="card">
+          <h2 class="section-title">Education</h2>
+          <div class="entries">
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">Northwestern University - M.S. in Machine Learning and Data Science</h3>
+                <p class="entry-meta">Dec 2023</p>
+              </div>
+            </article>
+            <article class="entry">
+              <div class="entry-head">
+                <h3 class="entry-role">University of Illinois at Urbana-Champaign - B.S. in Statistics, Economics</h3>
+                <p class="entry-meta">Mar 2021</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section class="card">
           <h2 class="section-title">Work Experience</h2>
           <div class="entries">
@@ -309,13 +327,13 @@
               </div>
               <ul>
                 <li>
-                  Led a critical extension of Vultron’s core LLM API layer to support Claude on AWS Bedrock and GCP,
-                  rewriting 50K+ lines of Python to enable FedRAMP High-compliant deployments for security-sensitive
+                  Led critical extension of Vultron's core LLM API layer to support Claude on AWS Bedrock and GCP,
+                  rewriting 50K+ lines of python to enable FedRAMP High-compliant deployments for security-sensitive
                   customers.
                 </li>
                 <li>
-                  Expanded addressable market by approximately 2x by unlocking FedRAMP High eligibility and enabling
-                  adoption by mid-market contractors with strict compliance requirements.
+                  Expanded addressable market ~2x by unlocking FedRAMP High eligibility, enabling adoption by
+                  mid-market contractors with strict security and compliance requirements.
                 </li>
               </ul>
             </article>
@@ -327,29 +345,34 @@
               </div>
               <ul>
                 <li>
-                  Generated $213M/year by developing Show-Score, an ML and optimization system using XGBoost and PuLP
-                  to improve appointment scheduling efficiency.
+                  Generating $213M/yr by developing "Show-Score," an ML and optimization-based system using XGBoost
+                  (patient show probabilities) and PuLP (office-specific classification thresholds) to improve
+                  appointment scheduling efficiency.
                 </li>
                 <li>
-                  Built and deployed 28 Show-Score retraining pipelines in parallel using GitLab CI, Docker,
-                  Terraform, and GCP, plus daily inference pipelines and Tableau monitoring dashboards.
+                  Built and deployed 28 "Show-Score" retraining pipelines in parallel (via GitLab CI, Docker,
+                  Terraform, and GCP), daily batch inference end-to-end data pipelines, and Tableau dashboards for
+                  performance monitoring.
                 </li>
-                <li>Delivered $24M+/year in revenue by automating office report delivery via Python, SMTP, and GCP.</li>
                 <li>
-                  Developed an XGBoost model generating $36M/year, adopted by 7.6k employees for daily
+                  Driving $24M+/yr in revenue by automating delivery of multiple reports to offices via Python, SMTP,
+                  and GCP.
+                </li>
+                <li>
+                  Developed an ML model (XGBoost) that generates $36M/yr, adopted by 7.6k employees for daily
                   decision-making.
                 </li>
                 <li>
-                  Saved $13M annually by constructing a pipeline that partially automates insurance verification form
+                  Saving $13M annually by constructing a pipeline to partially automate insurance verification form
                   population.
                 </li>
                 <li>
-                  Created an automated forecasting system that predicts Aspen’s total revenue with 97.8% accuracy at a
-                  6-month horizon.
+                  Created an automatic forecasting system which predicts Aspen's total revenue with 97.8% accuracy
+                  6-months out.
                 </li>
                 <li>
                   Prototyped a Python pipeline to ingest, validate, and process data from IoT weather stations across
-                  1.1k office locations, reducing runtime from 8 hours to 2 hours.
+                  1.1k office locations, optimizing the process to reduce runtime from 8 hours to 2 hours.
                 </li>
               </ul>
             </article>
@@ -361,16 +384,18 @@
               </div>
               <ul>
                 <li>
-                  Led design and implementation of a dynamic Q&A system, integrating RAG to improve answer recall by
-                  11% using 800+ sources.
+                  Led the design and implementation of a dynamic Q&A system for Amazon, integrating a
+                  Retrieval-Augmented Generation pipeline that improved answer recall by 11%, utilizing 800+ sources
+                  to enhance content depth.
                 </li>
                 <li>
-                  Achieved a 100% improvement in content coherence by fine-tuning LLaMA 2 7B on curated data produced
-                  from AWS VPC documentation.
+                  Achieved a 100% improvement in content coherence by fine-tuning LLaMA 2 7B on a curated dataset,
+                  generated via a pipeline that extracts high-quality question-answer pairs from AWS's VPC
+                  documentation.
                 </li>
                 <li>
                   Built a user-friendly UI and backend for the Amazon VPC Q&A system to support dynamic answer
-                  retrieval and serving.
+                  retrieval/serving.
                 </li>
               </ul>
             </article>
@@ -382,38 +407,19 @@
               </div>
               <ul>
                 <li>
-                  Developed an autoencoder model that achieved 70% precision for Boeing 787 electrical heartbeat
-                  anomaly detection, with anticipated savings of $20k.
+                  Pioneered the development of an autoencoder model, attaining 70% precision in detecting Boeing 787
+                  electrical "heartbeat" anomalies, leading to an anticipated cost savings of $20k.
                 </li>
                 <li>
-                  Built a dynamic dashboard to visualize abnormality scores, feature signals, and reconstructions,
-                  reducing iteration time by 75%.
+                  Established a dynamic dashboard to visualize "abnormality score," features, and reconstructed
+                  features; decreasing model iteration time by 75% and facilitating a deeper understanding of model
+                  learning processes.
                 </li>
                 <li>
-                  Engineered a random forest model and identified temperature as a key feature for 787 generator
-                  anomaly detection.
+                  Engineered a random forest model, successfully isolating temperature as an important feature for
+                  detecting 787 generator anomalies.
                 </li>
               </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="card">
-          <h2 class="section-title">Education</h2>
-          <div class="entries">
-            <article class="entry">
-              <div class="entry-head">
-                <h3 class="entry-role">Northwestern University</h3>
-                <p class="entry-meta">Dec 2023</p>
-              </div>
-              <p class="entry-meta">M.S. in Machine Learning and Data Science</p>
-            </article>
-            <article class="entry">
-              <div class="entry-head">
-                <h3 class="entry-role">University of Illinois at Urbana-Champaign</h3>
-                <p class="entry-meta">Mar 2021</p>
-              </div>
-              <p class="entry-meta">B.S. in Statistics, Economics</p>
             </article>
           </div>
         </section>
@@ -428,11 +434,12 @@
               </div>
               <ul>
                 <li>
-                  Improved office KPI tracking efficiency by 95% by developing and maintaining a full-stack KPI web
-                  app using Cloudflare, Django REST Framework, Next.js, PostgreSQL, Terraform, and GitHub CI/CD.
+                  Improved office KPI tracking efficiency by 95% through the development and maintenance of a
+                  full-stack KPI tracking web app; utilizing Cloudflare, Django Rest Framework, Next.js, PostgreSQL,
+                  Terraform, and GitHub CI/CD.
                 </li>
                 <li>
-                  Built a custom Linux server to host the internal KPI platform with 24/7 uptime, SSH-based remote
+                  Built a custom Linux server to host internal KPI platform, enabling 24/7 uptime, SSH-based remote
                   development, and secure office access via IP whitelisting.
                 </li>
               </ul>
@@ -459,7 +466,7 @@
       </main>
 
       <footer>
-        <p>Sam Swain • AI/ML Engineering • Open to impactful technical work</p>
+        <p>Sam Swain</p>
       </footer>
     </div>
   </body>
